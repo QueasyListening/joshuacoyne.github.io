@@ -160,7 +160,7 @@ button:hover {
     width: 100%;
     margin-bottom: 0;
     margin-top: 10px;
-    font-size: 1.1vw;
+    font-size: 1vw;
     line-height: 1.6;
     font-weight: 600;
 }
@@ -238,6 +238,7 @@ button:hover {
     border-radius: 5px;
     padding: 16px;
     color: green;
+    z-index: 99;
 }
 
 .arrow-icon {

@@ -6,7 +6,6 @@
     width: 265px;
     height: 100%;
     transition: all .5s ease-out;
-    z-index: 100;
 }
 
 .pull-tab {
@@ -20,10 +19,12 @@
     top: 50px;
     overflow-x: hidden;
     transition: all .5s ease-out;
+    z-index: 100;
 }
 
 .pull-tab:hover {
     cursor: pointer;
+    z-index: 100;
 }
 
 .hamburger-line {
@@ -48,6 +49,7 @@
     align-items: center;
     border-radius: 10px 0 0 10px;
     border-right: none;
+    z-index: 100;
     
 }
 
