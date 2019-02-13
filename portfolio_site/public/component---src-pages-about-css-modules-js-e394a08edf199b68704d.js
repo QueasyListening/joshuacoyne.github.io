@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{145:function(e,n,t){"use strict";t.r(n);var l=t(0),a=t.n(l),r=function(e){var n=e.children;return a.a.createElement("div",{style:{width:"100%"}},n)};n.default=function(){return a.a.createElement(r,null,a.a.createElement("h1",null,"About CSS Modules"),a.a.createElement("p",null,"CSS Modules are cool"))}}}]);
+//# sourceMappingURL=component---src-pages-about-css-modules-js-e394a08edf199b68704d.js.map

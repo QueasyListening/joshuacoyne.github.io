@@ -31,7 +31,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
@@ -42,8 +43,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b master"
   }
 }
