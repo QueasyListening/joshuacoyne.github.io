@@ -1,0 +1,310 @@
+.flower-container {
+    height: 500px;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 60px;
+}
+
+.droplet {
+    border-radius: 5px 90%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 138px;
+    left: 50%;
+    transform-origin: left top;
+    opacity: 0;
+    z-index: 0;
+
+}
+
+#no1 {
+    background: goldenrod;
+    animation: spin 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-play-state: paused;
+}
+
+#no2 {
+    background: orangered;
+    animation: spin2 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.05s;
+    animation-play-state: paused;
+}
+
+#no3 {
+    background: goldenrod;
+    animation: spin3 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-play-state: paused;
+}
+
+#no4 {
+    background: orangered;
+    animation: spin4 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.15s;
+    animation-play-state: paused;
+}
+
+#no5 {
+    background: goldenrod;
+    animation: spin5 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    animation-play-state: paused;
+}
+
+#no6 {
+    background: orangered;
+    animation: spin6 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+    animation-play-state: paused;
+}
+
+#no7 {
+    background: goldenrod;
+    animation: spin7 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.30s;
+    animation-play-state: paused;
+}
+
+#no8 {
+    background: orangered;
+    animation: spin8 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.35s;
+    animation-play-state: paused;
+}
+
+#no9 {
+    background: goldenrod;
+    animation: spin9 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.40s;
+    animation-play-state: paused;
+}
+
+#no10 {
+    background: orangered;
+    animation: spin10 5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.45s;
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(324deg) scale(1);
+        transform: rotate(324deg) scale(1);
+    }
+
+}
+
+@keyframes spin2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(288deg) scale(1);
+        transform: rotate(288deg) scale(1);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(252deg) scale(1);
+        transform: rotate(252deg) scale(1);
+    }
+}
+
+@keyframes spin4 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(2160deg) scale(1);
+        transform: rotate(216deg) scale(1);
+    }
+}
+
+@keyframes spin5 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(180deg) scale(1);
+        transform: rotate(180deg) scale(1);
+    }
+}
+
+@keyframes spin6 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(144deg) scale(1);
+        transform: rotate(144deg) scale(1);
+    }
+}
+
+@keyframes spin7 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(108deg) scale(1);
+        transform: rotate(108deg) scale(1);
+    }
+}
+
+@keyframes spin8 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(72deg) scale(1);
+        transform: rotate(72deg) scale(1);
+    }
+
+}
+
+@keyframes spin9 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(36deg) scale(1);
+        transform: rotate(36deg) scale(1);
+    }
+}
+
+@keyframes spin10 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.stem {
+    background-color: green;
+    height: 1px;
+    width: 10px; 
+    position: absolute;
+    bottom: 58px;
+    border: 2px solid darkgreen;
+    transition: all 2s;
+    transition-property: height, top;
+}
+
+.pot {
+    width: 80px;
+    height: 15px; 
+    background-color: rgb(226,114,91);
+    position: absolute;
+    bottom: 47px;
+    border-radius: 20%;
+    border: 2px solid brown;
+    z-index: 0;
+}
+
+.pot:after {
+    height: 0;
+    width: 60px;
+    border-top: 45px solid #e2725b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 7.5px;
+    top: 13px;
+}
+
+.pot-outline {
+    height: 0;
+    width: 66px;
+    border-top: 47px solid brown;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+}
+
+.leaf {
+    background-color: green;
+    border: 2px solid darkgreen;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px 90%;
+    transform: scale(0.01);
+    transition: all 1s ease-out;
+    z-index: 0;
+}
+
+.leaf-1 {
+    bottom: -5px;
+    left: -18px;
+
+}
+
+.leaf-2 {
+    left: -7px;
+    bottom: 26px;
+    border-radius: 90% 5px;
+}
