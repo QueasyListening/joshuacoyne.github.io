@@ -1,0 +1,917 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(44, 44, 44);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: color .5s ease-in-out
+}
+
+a:hover {
+    color: goldenrod;
+    cursor: pointer;
+}
+
+a:visited {
+    color: #38AFF4;
+}
+
+a:active {
+    color: goldenrod;
+}
+
+@font-face {
+    font-family: 'SantaCarla';
+    src: url('./Fonts/Sanra\ Carla\ Font/santacarla.ttf');
+         /* url('./Fonts/Sanra\ Carla\ Font/santacarla-webfont.woff'),
+         url('./Fonts/Sanra\ Carla\ Font/santacarla-webfont.woff2'); */
+}
+
+/* Navbar */
+.nav-container {
+    position: fixed;
+    top: 80px;
+    right: -191px;
+    width: 190px;
+    transition: transform .5s ease-out;
+    z-index: 100;
+}
+
+.pull-tab {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: green;
+    border: 5px solid black;
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    overflow-x: hidden;
+    transition: all .5s ease-out;
+    z-index: 100;
+}
+
+.pull-tab:hover {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.pull-tab div {
+    height: 4px;
+    width: 45px;
+    background-color: black;
+    margin: 7px 15px;
+}
+
+.navbar {
+    width: 190px;
+    position: relative;
+    right: 0;
+    height: 449px;
+    padding: 25px 0;
+    background-color: green;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    z-index: 100;
+}
+
+.border-cover {
+    height: 90.5px;
+    width: 7px;
+    position: absolute;
+    top: 55px;
+    background-color: green;
+    right: 184px;
+    transition: all .5s ease-out;
+    z-index: 100;
+}
+
+.navbar li {
+    font-size: 161%;
+    text-align: center;
+    background-color: green;
+    border: none;
+    font-weight: 550;
+    color: rgb(44, 44, 44);
+    transition: color .5s ease-out;
+}
+
+.navbar .active {
+    color: goldenrod;
+}
+
+/* Flower */ 
+.flower-container {
+    width: 100px;
+    position: absolute;
+    bottom: 179px;  /* height of footer(132px) + height of pot-outline(47px) */
+    left: 65px;
+    top: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.petal {
+    border-radius: 5px 90%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: left top;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+}
+
+.petal-odd {
+    background: goldenrod;
+}
+
+.petal-even {
+    background: orangered;
+}
+
+.petal-1 {
+    animation-name: spin;
+    animation-delay: 0s;
+}
+
+.petal-2 {
+    animation-name: spin2;
+    animation-delay: 0.05s;
+}
+
+.petal-3 {
+    animation-name: spin3;
+    animation-delay: 0.1s;
+}
+
+.petal-4 {
+    animation-name: spin4;
+    animation-delay: 0.15s;
+}
+
+.petal-5 {
+    animation-name: spin5;
+    animation-delay: 0.2s;
+}
+
+.petal-6 {
+    animation-name: spin6;
+    animation-delay: 0.25s;
+}
+
+.petal-7 {
+    animation-name: spin7;
+    animation-delay: 0.30s;
+}
+
+.petal-8 {
+    animation-name: spin8;
+    animation-delay: 0.35s;
+}
+
+.petal-9 {
+    animation-name: spin9;
+    animation-delay: 0.40s;
+}
+
+.petal-10 {
+    animation-name: spin10;
+    animation-delay: 0.45s;
+}
+
+.stem {
+    background-color: green;
+    width: 10px; 
+    position: absolute;
+    bottom: 0;
+    border: 2px solid darkgreen;
+    transition: height 2s ease-out;
+    height: 0;
+}
+
+.pot {
+    width: 80px;
+    height: 15px; 
+    background-color: rgb(226,114,91);
+    position: absolute;
+    bottom: 0;
+    border-radius: 20%;
+    border: 2px solid brown;
+    z-index: 0;
+}
+
+.pot:after {
+    height: 0;
+    width: 40px;
+    border-top: 45px solid #e2725b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 7.5px;
+    top: 13px;
+}
+
+.pot-outline {
+    height: 0;
+    width: 66px;
+    border-top: 47px solid brown;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -47px;
+    z-index: 0;
+}
+
+.leaf {
+    background-color: green;
+    border: 2px solid darkgreen;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px 90%;
+    transform: scale(0.01);
+    transition: all 1s ease-out;
+    z-index: 0;
+}
+
+.leaf-1 {
+    bottom: 11px;
+    left: -17px;
+
+}
+
+.leaf-2 {
+    left: -7px;
+    bottom: 37px;
+    border-radius: 90% 5px;
+}
+
+/* Flower Keyframes */
+@keyframes spin {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(324deg) scale(1);
+        transform: rotate(324deg) scale(1);
+    }
+
+}
+
+@keyframes spin2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(288deg) scale(1);
+        transform: rotate(288deg) scale(1);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(252deg) scale(1);
+        transform: rotate(252deg) scale(1);
+    }
+}
+
+@keyframes spin4 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(2160deg) scale(1);
+        transform: rotate(216deg) scale(1);
+    }
+}
+
+@keyframes spin5 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(180deg) scale(1);
+        transform: rotate(180deg) scale(1);
+    }
+}
+
+@keyframes spin6 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(144deg) scale(1);
+        transform: rotate(144deg) scale(1);
+    }
+}
+
+@keyframes spin7 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(108deg) scale(1);
+        transform: rotate(108deg) scale(1);
+    }
+}
+
+@keyframes spin8 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(72deg) scale(1);
+        transform: rotate(72deg) scale(1);
+    }
+
+}
+
+@keyframes spin9 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(36deg) scale(1);
+        transform: rotate(36deg) scale(1);
+    }
+}
+
+@keyframes spin10 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0.01);
+        transform: rotate(0deg) scale(0.01);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* bubbles and titles */
+.page-title {
+    font-family: 'SantaCarla';
+    font-size: 6rem;
+    -webkit-text-fill-color: green; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+    margin-top: 40px;
+    position: fixed;
+    right: 225px;
+    top: 5px;
+    transition: transform 1s ease-in;
+    transform: translateX(3000px);
+    display: flex;
+    visibility: hidden;
+}
+
+.s {
+    margin-left: -14px;
+}
+
+.page-title-intro {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.parallelogram {
+    background-color: saddlebrown;
+    height: 100px;
+    width: 77px;
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-29deg);
+    position: absolute;
+    z-index: -1;
+    left: -5px;
+    border: 5px solid black;
+}
+
+.jumbo-bubble {
+    background-color: #e6f3ff;
+    opacity: .5;
+    border-radius: 40px;
+    padding: 10px 50px;
+    position: absolute;
+    right: 225px;
+    top: 170px;
+    left: 220px;
+    bottom: 161px;
+    display: flex;
+    visibility: hidden;
+    transform: scale(.01);
+    z-index: 1;
+    transform: scale(.00000000001);
+}
+
+.first-bubble {
+    transform: scale(1);
+    visibility: visible;
+    padding: 50px;
+    justify-content: space-around
+}
+
+.intro-pic {
+    height: 90%;
+    border-radius: 4px;
+    margin: 0px 0 15px 15px;
+    float: right;
+}
+
+.bubble-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 105%;
+    line-height: 1.1;
+    overflow: auto;
+    height: 100%;
+}
+
+.signature {
+    float: right;
+    font-size: 150%;
+    margin-right: 75px;
+    margin-top: 10px;
+}
+
+.project-bubble {
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    height: 145px;
+    width: 217px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 0 15px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 6px 1px;
+  }
+
+.project-card-front {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px 7px;
+    text-decoration: none;
+    color: black;
+    transition: transform .3s;
+    
+}
+
+.project-card-back {
+    background-color: #38AFF4;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 5px;
+}
+
+.project-title {
+    font-size: 125%;
+    margin: 5px;
+}
+
+.project-img {
+    max-width: 100%;
+}
+
+.project-text {
+    padding: 5px;
+    line-height: 1.1;
+    font-size: 104%;
+    height: 100%;
+}
+
+.background-pic {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+.wrap-bubble {
+    flex-wrap: wrap;
+}
+
+.bubble-header {
+    width: 100%;
+    display: flex;
+    margin-top: 11px;
+    margin-bottom: 25px;
+}
+
+.education-title {
+    font-size: 331%;
+    margin: 15px auto 0 25px;
+}
+
+.education-pic {
+    max-height: 100px;
+}
+
+.about-bubble {
+    padding: 40px 10%;
+    flex-wrap: wrap;
+}
+
+.tech-logo {
+    height: 65px;
+}
+
+.about-header {
+    justify-content:space-between;
+}
+
+.about-text {
+    margin-top: 25px;
+
+}
+
+/* Bubble Animations */
+@keyframes bubble-shrink {
+    0% {
+        transform: scale(1);
+        
+    }
+
+    10% {
+        transform: scale(1.15);
+    }
+
+    99% {
+        transform: scale(.01);
+    }
+
+    100% {
+        transform: scale(0);
+        visibility: hidden;
+    }
+}
+
+@keyframes bubble-grow {
+    0% {
+        transform: scale(.01);
+        visibility: visible;
+        
+    }
+    
+    60% {
+        transform: scale(1.15);
+    }
+
+    80% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+        
+    }
+}
+
+.next-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 25%;
+    height: 100px;
+    width: 170px;
+    background-color: rgb(44, 44, 44);
+    font-size: 38px;
+    font-weight: 800;
+    border: 3px solid green;
+    border-radius: 5px;
+    color: green;
+}
+
+.next-btn:active {
+    background: green;
+    color: rgb(44, 44, 44);
+}
+
+.arrow-icon {
+    margin-top: 7px;
+}
+
+/* footer */
+footer {
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 132px;
+    left: 0px;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    color: rgb(44, 44, 44);
+}
+
+.footer-section {
+    font-weight:1000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+}
+
+.footer-item {
+    margin: 6px 0;
+    color: rgb(44, 44, 44);
+    font-size: 116%;
+}
+
+.personal-info {
+    align-items: center;
+}
+
+.project-links {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-icon {
+    margin-right: 7px;
+}
+
+/* media queries */
+@media(max-width: 1300px) {
+    .page-title {
+        font-size: 511%;
+        margin-top: 25px;
+    }
+
+    .parallelogram {
+        height: 85px;
+        width: 62px;
+    }
+
+    .jumbo-bubble {
+        top: 131px;
+        padding: 30px;
+    }
+
+    .bubble-text {
+   
+    }
+
+    .intro-pic {
+        height: 75%;
+    }
+
+    .signature {
+        font-size: 150%;
+        margin-right: 75px;
+    }
+
+    .about-bubble {
+        padding: 40px 10%;
+    }
+}
+
+@media(max-width: 1150px) {
+    .intro-pic {
+        height: 50%;
+    }
+
+    .next-btn {
+        width: 125px;
+        height: 69px;
+        font-size: 160%;
+        bottom: 29%;
+    }
+    
+    .jumbo-bubble {
+        right: 190px;
+    }
+
+}
+
+@media(max-width: 964px) {
+    .flower-container {
+        bottom: 152px;
+        left: 19px;
+        top: 83px;
+    }
+
+    .petal {
+        height: 50px;
+        width: 50px;
+        z-index: 3;
+    }
+
+    .pot {
+        width: 46px;
+        height: 11px;
+    }
+
+    .pot:after {
+        width: 18px;
+        border-top: 18px solid #e2725b;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        left: 4.5px;
+        top: 9px;
+    }
+
+    .pot-outline {
+        width: 36px;
+        border-top: 20px solid brown;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -20px;
+    }
+
+    .stem {
+        width: 6px;
+    }
+
+    .leaf-1 {
+        left: -17px;
+        bottom: 6px;
+    }
+
+    .leaf-2 {
+        left: -11px;
+        bottom: 26px;
+    }
+
+    .page-title {
+       font-size: 400%;
+       right: 64px;
+    }
+
+    .parallelogram {
+        height: 73px;
+        width: 47px;
+    }
+
+    .jumbo-bubble {
+        left: 101px;
+        right: 60px;
+    }
+
+    .bubble-text {
+        font-size: 100%;
+        line-height: 1;
+    }
+
+    .project-card {
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .next-btn {
+        display: none;
+    }
+
+    .intro-pic {
+        height: 40%;
+    }
+}
+
+@media(max-width: 610px) {
+    .page-title {
+        font-size: 10vw;
+        -webkit-text-stroke-width: 3px;
+        margin-top: 10px;
+        position: absolute;
+        right: 30px;
+    }
+
+    .parallelogram {
+        height: 11vw;
+        width: 7.5vw;
+    }
+
+    .stem {
+        display: none;
+    }
+
+    .pot {
+        display: none;
+    }
+
+    .pot-outline {
+        display: none;
+    }
+
+    .flower-container {
+        top: 9vw;
+        left: 0;
+    }
+
+    .petal {
+        height: 6vw;
+        width: 6vw;
+        border-width: 2px;
+    }
+
+    .jumbo-bubble {
+        left: 10px;
+        right: 30px;
+        top: 83px;
+        bottom: unset;
+        height: 68%;
+        padding: 25px;
+    }
+
+    .bubble-text {
+        font-size: 84%;
+    }
+
+    .signature {
+        font-size: 125%;
+        margin-right: 25px;
+    }
+
+    footer {
+        top: 88vh;
+        bottom: unset;
+        height: unset;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .personal-links {
+        align-items: center;
+        flex-direction: column-reverse
+    }
+
+    .personal-info {
+        order: -1;
+        flex-direction: column-reverse
+    }
+
+    .name {
+        display: none;
+    }
+}
