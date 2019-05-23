@@ -488,7 +488,7 @@ a:active {
 }
 
 .flip-card {
-    height: 145px;
+    height: 165px;
     width: 217px;
     background-color: transparent;
     perspective: 1000px;
@@ -503,7 +503,7 @@ a:active {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -535,9 +535,15 @@ a:active {
     padding: 5px;
 }
 
+.fa-external-link-alt {
+    float: right;
+    margin-top: 6px;
+    color: black;
+}
+
 .project-title {
     font-size: 125%;
-    margin: 5px;
+    margin: 5px 0 15px 5px;
 }
 
 .project-img {
