@@ -7,14 +7,18 @@ let pageNumber = 0;
 
 // Code for growing the flower
 const growFlower = () => {
-    let stem = document.getElementsByClassName('stem')[0];
-    window.setTimeout(() => {
-        stem.style.height = '99.5%';
-        window.setTimeout(displayFlower, 1800);
-        window.setTimeout(displayLeaves, 1500);
-    }, 1000);
+    if (window.innerWidth > 610){
+        let stem = document.getElementsByClassName('stem')[0];
+        window.setTimeout(() => {
+            stem.style.height = '99.5%';
+            window.setTimeout(displayFlower, 1800);
+            window.setTimeout(displayLeaves, 1500);
+        }, 1000);
+    } else {
+        displayFlower();
+    }
             
-    const displayLeaves = () => {
+    function displayLeaves() {
         const leaves = Array.from(document.getElementsByClassName('leaf'));
         if (window.innerWidth < 964) {
             leaves.forEach( (leaf, i) => {
@@ -41,7 +45,7 @@ const growFlower = () => {
         };
     };
     
-    const displayFlower = () => {
+    function displayFlower() {
         const droplets = Array.from(document.getElementsByClassName('petal'));
         
         droplets.forEach(droplet => {

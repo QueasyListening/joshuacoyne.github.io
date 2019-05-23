@@ -485,6 +485,7 @@ a:active {
 .project-bubble {
     justify-content: left;
     flex-wrap: wrap;
+    padding: 50px;
 }
 
 .flip-card {
