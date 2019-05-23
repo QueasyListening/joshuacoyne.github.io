@@ -24,9 +24,9 @@ a:active {
 
 @font-face {
     font-family: 'SantaCarla';
-    src: url('/santacarla.ttf'),
-         url('/santacarla-webfont.woff'),
-         url('/santacarla-webfont.woff2');
+    src: url('./santacarla.ttf'),
+         url('./santacarla-webfont.woff'),
+         url('./santacarla-webfont.woff2');
 }
 
 /* Navbar */
