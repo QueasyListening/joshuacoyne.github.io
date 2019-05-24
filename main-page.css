@@ -448,7 +448,6 @@ a:active {
     bottom: 161px;
     display: flex;
     visibility: hidden;
-    transform: scale(.01);
     z-index: 1;
     transform: scale(.00000000001);
 }
@@ -583,6 +582,10 @@ a:active {
     max-height: 100px;
 }
 
+.education-text {
+    height: 60%;
+}
+
 .about-bubble {
     padding: 40px 10%;
     flex-wrap: wrap;
@@ -624,8 +627,8 @@ a:active {
 
 @keyframes bubble-grow {
     0% {
-        transform: scale(.01);
-        visibility: visible;
+        transform: scale(0);
+        /* visibility: visible; */
         
     }
     

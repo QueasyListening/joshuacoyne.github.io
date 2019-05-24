@@ -89,7 +89,7 @@ const changePage = (newPageNumber) => {
         };    
     }, { once: true });
 
-    window.setTimeout(() => {jumboBubbles[newPageNumber].style.visibility = 'visible'}, 800);
+    window.setTimeout(() => {jumboBubbles[newPageNumber].style.visibility = 'visible'}, 1000);
     jumboBubbles[newPageNumber].style.transform = 'scale(.01)';
     jumboBubbles[newPageNumber].style.animation = 'bubble-grow .5s ease-out 1s forwards';
     pageTitles[newPageNumber].style.transform = 'translateX(0px)';
